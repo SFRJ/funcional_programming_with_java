@@ -1,6 +1,6 @@
 package service_selection_patter.services.sumservice.model;
 
-public class SumRequest {
+public final class SumRequest {
     private final int operand1;
     private final int operand2;
 

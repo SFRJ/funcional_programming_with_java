@@ -1,6 +1,6 @@
 package service_selection_patter.services.sumservice.model;
 
-public class SumResponse {
+public final class SumResponse {
     private final int result;
 
     public SumResponse(int result) {

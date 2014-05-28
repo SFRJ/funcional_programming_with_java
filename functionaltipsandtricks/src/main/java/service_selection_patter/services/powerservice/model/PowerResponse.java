@@ -1,6 +1,6 @@
 package service_selection_patter.services.powerservice.model;
 
-public class PowerResponse {
+public final class PowerResponse {
     private final int result;
 
     public PowerResponse(int result) {
