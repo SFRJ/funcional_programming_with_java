@@ -1,9 +1,9 @@
-package service_selection_patter.model;
+package service_selection_patter.services.sumservice.model;
 
-public class PowerResult {
+public class SumResponse {
     private final int result;
 
-    public PowerResult(int result) {
+    public SumResponse(int result) {
         this.result = result;
     }
 

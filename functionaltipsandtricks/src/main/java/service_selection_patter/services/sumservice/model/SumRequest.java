@@ -1,4 +1,4 @@
-package service_selection_patter.model;
+package service_selection_patter.services.sumservice.model;
 
 public class SumRequest {
     private final int operand1;
