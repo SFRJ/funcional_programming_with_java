@@ -1,6 +1,7 @@
 package service_selection_patter;
 
 import org.junit.Test;
+import service_selection_patter.model.*;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
@@ -9,12 +10,12 @@ public class RequestHandlerTest {
 
     @Test
     public void shouldSum() {
-        assertThat(new RequestHandler().handleRequest("sum 3 5"), is("sum result 8"));
+        assertThat(new RequestHandler().<SumRequest,SumResult>handleRequest("sum 3 5"), is("sum result 8"));
     }
 
     @Test
     public void shouldPowerOftwo() {
-        assertThat(new RequestHandler().handleRequest("power 3 "), is("3 to the power of 2 is 9"));
+        assertThat(new RequestHandler().<PowerRequest,PowerResult>handleRequest("power 3 "), is("power result 9"));
     }
 
 }

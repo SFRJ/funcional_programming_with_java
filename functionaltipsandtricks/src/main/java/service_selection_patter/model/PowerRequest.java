@@ -1,4 +1,4 @@
-package service_selection_patter;
+package service_selection_patter.model;
 
 public class PowerRequest {
     private final int operand;

@@ -1,4 +1,4 @@
-package service_selection_patter;
+package service_selection_patter.generics;
 
 public interface OperatorRequestType<REQUEST, RESPONSE>  {
         RequestMatcher requestMatcher();
