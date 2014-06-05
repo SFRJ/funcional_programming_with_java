@@ -1,5 +1,6 @@
 package service_selection_patter;
 
+import service_selection_patter.services.BussinessException;
 import service_selection_patter.services.ServiceInvoker;
 import service_selection_patter.services.ResponseMarshaller;
 import service_selection_patter.services.RequestMatcher;
@@ -17,7 +18,7 @@ public interface ServiceRequestType<REQUEST, RESPONSE>  {
 
         RequestUnmarshaller<REQUEST> unmarshaller();
 
-        ServiceInvoker<REQUEST, RESPONSE> invoker();
+        ServiceInvoker<REQUEST, RESPONSE, BussinessException> invoker();
 
         ResponseMarshaller<RESPONSE> marshaller();
 }

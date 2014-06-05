@@ -1,7 +1,7 @@
 package service_selection_patter.services;
 
-import service_selection_patter.errorhandling.ValidatorException;
+import javax.xml.bind.ValidationException;
 
 public interface RequestValidator {
-    public void validate(String request) throws ValidatorException;
+    public void validate(String request) throws ValidationException;
 }

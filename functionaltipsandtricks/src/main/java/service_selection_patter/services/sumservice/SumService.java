@@ -2,6 +2,7 @@ package service_selection_patter.services.sumservice;
 
 import service_selection_patter.ServiceRequestType;
 import service_selection_patter.services.ServiceInvoker;
+import service_selection_patter.services.sumservice.bussinessexception.SumServiceBussinessExcetion;
 import service_selection_patter.services.sumservice.invoker.SumServiceInvoker;
 import service_selection_patter.services.ResponseMarshaller;
 import service_selection_patter.services.sumservice.marshaller.SumServiceMarshaller;
@@ -37,7 +38,7 @@ public class SumService implements ServiceRequestType {
     }
 
     @Override
-    public ServiceInvoker<SumRequest, SumResponse> invoker() {
+    public ServiceInvoker<SumRequest, SumResponse, SumServiceBussinessExcetion> invoker() {
         return new SumServiceInvoker();
     }
 

@@ -1,5 +1,6 @@
 package service_selection_patter.services.powerservice;
 
+import service_selection_patter.services.BussinessException;
 import service_selection_patter.services.RequestValidator;
 import service_selection_patter.services.ResponseMarshaller;
 import service_selection_patter.services.ServiceInvoker;
@@ -14,7 +15,7 @@ import service_selection_patter.services.powerservice.unmarshaller.PowerServiceU
 import service_selection_patter.services.RequestUnmarshaller;
 import service_selection_patter.services.powerservice.validator.PowerServiceRequestValidator;
 
-public class PowerService implements ServiceRequestType {
+public class PowerService implements ServiceRequestType<PowerRequest, PowerResponse> {
 
     @Override
     public RequestMatcher requestMatcher() {
@@ -37,7 +38,7 @@ public class PowerService implements ServiceRequestType {
     }
 
     @Override
-    public ServiceInvoker<PowerRequest, PowerResponse> invoker() {
+    public ServiceInvoker<PowerRequest, PowerResponse, BussinessException> invoker() {
         return new PowerServiceInvoker();
     }
 }
